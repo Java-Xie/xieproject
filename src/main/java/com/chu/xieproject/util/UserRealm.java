@@ -17,8 +17,8 @@ public class UserRealm extends AuthorizingRealm {
         //模拟数据库：前提条件是有绑定权限字符串
         Subject subject  = SecurityUtils.getSubject();
         Users u = (Users)subject.getPrincipal();
-        System.out.println(u.getPermission());
-        simpleAuthorizationInfo.addStringPermission(u.getPermission());
+        System.out.println(u.getuTrueName());
+        simpleAuthorizationInfo.addStringPermission(u.getuTrueName());
         return simpleAuthorizationInfo;
     }
 
@@ -36,7 +36,7 @@ public class UserRealm extends AuthorizingRealm {
             return null;
         }
         //从数据库得到的数据
-        Users u = new Users(1,name,pwd,"user:add");
+        Users u = new Users();
         return new SimpleAuthenticationInfo(u,pwd,"");
     }
 }
