@@ -5,17 +5,17 @@ import javax.persistence.*;
 @Entity//声明这是一个实体
 public class Users {
     @Id
-    private Integer uid;
+    private Integer id;
     private String name;
     private String pwd;
     private String permission;
 
-    public Integer getUid() {
-        return uid;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -45,7 +45,7 @@ public class Users {
     @Override
     public String toString() {
         return "Users{" +
-                "uid=" + uid +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", pwd='" + pwd + '\'' +
                 ", permission='" + permission + '\'' +
