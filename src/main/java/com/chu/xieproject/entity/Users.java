@@ -3,71 +3,52 @@ package com.chu.xieproject.entity;
 import javax.persistence.*;
 
 @Entity//声明这是一个实体
-@Table(name="users")//当类名和表名不一致的情况下写
 public class Users {
     @Id
-    @Column(name="u_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer uId;
-    @Column(name="u_name")
-    private String uName;
-    @Column(name="u_true_name")
-    private String uTrueName;
-    @Column(name="u_password")
-    private String uPassword;
-    @Column(name="u_roleid")
-    private Integer uRoleid;
-    /*
-    * 一对多   多对一  自学成才
-    * */
-    public Integer getuId() {
-        return uId;
+    private Integer uid;
+    private String name;
+    private String pwd;
+    private String permission;
+
+    public Integer getUid() {
+        return uid;
     }
 
-    public void setuId(Integer uId) {
-        this.uId = uId;
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 
-    public String getuName() {
-        return uName;
+    public String getName() {
+        return name;
     }
 
-    public void setuName(String uName) {
-        this.uName = uName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getuTrueName() {
-        return uTrueName;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setuTrueName(String uTrueName) {
-        this.uTrueName = uTrueName;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
-    public String getuPassword() {
-        return uPassword;
+    public String getPermission() {
+        return permission;
     }
 
-    public void setuPassword(String uPassword) {
-        this.uPassword = uPassword;
-    }
-
-    public Integer getuRoleid() {
-        return uRoleid;
-    }
-
-    public void setuRoleid(Integer uRoleid) {
-        this.uRoleid = uRoleid;
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 
     @Override
     public String toString() {
         return "Users{" +
-                "uId=" + uId +
-                ", uName='" + uName + '\'' +
-                ", uTrueName='" + uTrueName + '\'' +
-                ", uPassword='" + uPassword + '\'' +
-                ", uRoleid=" + uRoleid +
+                "uid=" + uid +
+                ", name='" + name + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", permission='" + permission + '\'' +
                 '}';
     }
 }
