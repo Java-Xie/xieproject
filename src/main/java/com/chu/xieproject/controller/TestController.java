@@ -66,6 +66,14 @@ public class TestController {
         return "index";
     }
 
+    //注册
+    @RequestMapping("/register")
+    public String register(String name,String pwd){
+
+        return "index";
+    }
+
+    //登录
     @RequestMapping("/doLogin")
     public String doLogin(String name,String pwd){
         System.out.println("开始登录:"+name+"/"+pwd);
@@ -84,5 +92,4 @@ public class TestController {
         //成功去的页面
         return "index";
     }
-
 }
