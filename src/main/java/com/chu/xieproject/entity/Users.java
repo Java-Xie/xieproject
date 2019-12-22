@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity//声明这是一个实体
 public class Users {
     @Id
+    //自动增长列
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String pwd;

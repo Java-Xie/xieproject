@@ -1,5 +1,6 @@
 package com.chu.xieproject;
 
+import com.chu.xieproject.mapper.TestMapper;
 import com.chu.xieproject.mapper.UsersLogMapper;
 import com.chu.xieproject.mapper.UsersMapper;
 import com.chu.xieproject.service.testservices.TestService;
@@ -16,18 +17,29 @@ class XieprojectApplicationTests {
     @Autowired
     private UsersLogMapper usersLogMapper;
 
-    /*@Autowired
-    private UsersLogMapper usersLogMapper;*/
-
     @Autowired
     private TestService testService;
+
+    @Autowired
+    private TestMapper testMapper;
 
     @Test
     void contextLoads() {
 //        System.out.println("测试"+usersMapper.findAll());
 //        System.out.println("测试service"+testService.login("admin","123"));
-        System.out.println("测试test"+testService.register("chu1","123"));
+        //注册账号
+//        System.out.println("测试test"+testService.register("chu2","123"));
        // System.out.println("测试userslog"+usersLogMapper.findAll());
+        //测试test表
+        com.chu.xieproject.entity.Test test = new com.chu.xieproject.entity.Test();
+        test.setTest("测试2");
+        test.setTestName("测试姓名2");
+        try {
+            testService.test(test);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(testMapper.findAll());
     }
 
 }
