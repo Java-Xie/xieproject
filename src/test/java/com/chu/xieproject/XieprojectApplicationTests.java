@@ -31,7 +31,7 @@ class XieprojectApplicationTests {
 //        System.out.println("测试test"+testService.register("chu2","123"));
        // System.out.println("测试userslog"+usersLogMapper.findAll());
         //测试test表
-        com.chu.xieproject.entity.Test test = new com.chu.xieproject.entity.Test();
+        /*com.chu.xieproject.entity.Test test = new com.chu.xieproject.entity.Test();
         test.setTest("测试2");
         test.setTestName("测试姓名2");
         try {
@@ -39,7 +39,14 @@ class XieprojectApplicationTests {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(testMapper.findAll());
+        System.out.println(testMapper.findAll());*/
+        float a = -18888888.2345f;
+        a+=1E7;
+        System.out.println(a);
+//        char c = '灄';
+//        System.out.println((int)c);
+        double d = 2.1234567890123456789;
+        System.out.println(d);
     }
 
 }
